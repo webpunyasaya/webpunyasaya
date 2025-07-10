@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$BABYBONK - The Pup's First BONK</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div id="preloader">
+        <img src="assets/babybonk-mascot.png" alt="BabyBonk Loading..." class="preloader-logo">
+    </div>
+
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="assets/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+<header class="main-header">
+    <nav class="main-nav">
+        <a href="#hero" class="logo-container">
+            <img src="assets/babybonk-logo.svg" alt="BabyBonk Logo" class="logo">
+            <span>$BABYBONK</span>
+        </a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#community">Community</a>
+        </div>
+        <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=YOUR_TOKEN_ADDRESS" target="_blank" class="button-primary nav-button">BUY NOW</a>
+        
+        <button id="hamburger-button" class="hamburger-button" aria-controls="mobile-nav" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </nav>
+    
+    <div id="mobile-nav" class="mobile-nav">
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#community">Community</a>
+        <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=YOUR_TOKEN_ADDRESS" target="_blank" class="button-primary mobile-buy-button">BUY $BABYBONK</a>
+    </div>
+</header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="animate-pop-in">THE PUP'S FIRST <span class="text-highlight">BONK</span>.</h1>
+                <p class="animate-fade-in">Born from the hype, raised by the community. $BABYBONK isn't just a token, it's the next generation of Solana's meme legacy.</p>
+                <div class="hero-buttons animate-fade-in">
+                    <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=YOUR_TOKEN_ADDRESS" target="_blank" class="button-primary large">GET YOUR $BABYBONK</a>
+                    <a href="#about" class="button-secondary large">LEARN MORE</a>
+                </div>
+            </div>
+            <img src="assets/babybonk-mascot.png" alt="BabyBonk Mascot" class="hero-mascot animate-bounce">
+        </section>
+
+        <section id="partners" class="partners-section">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>AVAILABLE ON</span> <img src="assets/partners/jupiter-logo.svg" alt="Jupiter">
+                    <span>USE</span> <img src="assets/partners/phantom-logo.svg" alt="Phantom">
+                    <span>SOON ON</span> <img src="assets/partners/raydium-logo.svg" alt="Raydium">
+                    <span>STORE IN</span> <img src="assets/partners/solflare-logo.svg" alt="Solflare">
+                    <span>AVAILABLE ON</span> <img src="assets/partners/jupiter-logo.svg" alt="Jupiter">
+                    <span>USE</span> <img src="assets/partners/phantom-logo.svg" alt="Phantom">
+                    <span>SOON ON</span> <img src="assets/partners/raydium-logo.svg" alt="Raydium">
+                    <span>STORE IN</span> <img src="assets/partners/solflare-logo.svg" alt="Solflare">
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about-section">
+            <h2>WHAT IS <span class="text-highlight">$BABYBONK?</span></h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>FOR THE PUPS</h3>
+                    <p>We're carrying the torch for the little guys. $BABYBONK is 100% community-owned, with a fair launch and no team tokens. Just pure, unfiltered meme energy for the Solana degens.</p>
+                </div>
+                <div class="about-card">
+                    <h3>BUILT TO GROW</h3>
+                    <p>Like any good pup, we're built for growth. Our mission is to integrate $BABYBONK across the entire Solana ecosystem, from DeFi platforms to NFT marketplaces and Web3 games.</p>
+                </div>
+                <div class="about-card">
+                    <h3>MORE THAN A MEME</h3>
+                    <p>While we love the fun, we're serious about our community. We're here to create, build, and bonk our way to the top, together. This is a movement, powered by vibes and diamond paws.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tokenomics" class="tokenomics-section">
+            <h2>TOKENOMICS</h2>
+            <p class="subtitle">Simple, transparent, and built for the long haul.</p>
+            <div class="tokenomics-container">
+                <div class="contract-box">
+                    <h4>CONTRACT ADDRESS</h4>
+                    <div class="address-wrapper">
+                        <span id="contract-address">Your_Contract_Address_Here_12345</span>
+                        <button id="copy-button" class="copy-button">COPY</button>
+                    </div>
+                </div>
+                <div class="token-details">
+                    <p><strong>TOTAL SUPPLY:</strong> 100,000,000,000 $BABYBONK</p>
+                    <p><strong>TAX:</strong> 0% BUY / 0% SELL</p>
+                    <p><strong>LIQUIDITY:</strong> BURNED FOREVER 🔥</p>
+                </div>
+                <div class="token-distribution">
+                    <div class="dist-item" style="--percentage: 60%;"><span>60%</span><p>Liquidity Pool</p></div>
+                    <div class="dist-item" style="--percentage: 30%;"><span>30%</span><p>Community Airdrop</p></div>
+                    <div class="dist-item" style="--percentage: 10%;"><span>10%</span><p>Marketing & CEX</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="community-section">
+            <h2>JOIN OUR CULT</h2>
+            <p>The pack is waiting. Follow us, join the chat, and let's get bonking.</p>
+            <div class="social-icons">
+                <a href="https://x.com/i/communities/1931666472033775907" target="_blank" class="social-icon"><img src="assets/icon-twitter.svg" alt="Twitter"></a>
+                <a href="https://t.me/+GtlewF45PBc5N2M1" target="_blank" class="social-icon"><img src="assets/icon-telegram.svg" alt="Telegram"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <img src="assets/babybonk-logo.svg" alt="BabyBonk Logo" class="footer-logo">
+        <p>$BABYBONK is a meme coin with no intrinsic value or expectation of financial return. It is a 100% community-driven project for entertainment purposes only.</p>
+        <p>&copy; 2025 $BABYBONK. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
