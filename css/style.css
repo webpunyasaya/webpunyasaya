@@ -54,7 +54,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 6s ease, visibility 6s ease;
 }
 .preloader-logo {
     width: 150px;
