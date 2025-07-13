@@ -14,16 +14,20 @@
     padding: 0;
 }
 
+/* ===== PERBAIKAN DIMULAI DI SINI ===== */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Mencegah scroll horizontal di level tertinggi */
 }
 
 body {
     font-family: 'Helvetica', sans-serif;
     background-color: var(--dark-color); /* Fallback color */
     color: var(--light-color);
-    overflow-x: hidden; /* Mencegah scroll horizontal di seluruh halaman */
+    overflow-x: hidden; /* Aturan ini sudah ada dan bagus, kita biarkan */
+    width: 100%; /* Memastikan body tidak lebih lebar dari layar */
 }
+/* ===== PERBAIKAN SELESAI DI SINI ===== */
 
 h1, h2, h3, h4, .button-primary, .button-secondary, .nav-links a, .logo-container span {
     font-family: var(--font-family);
@@ -33,7 +37,7 @@ h1, h2, h3, h4, .button-primary, .button-secondary, .nav-links a, .logo-containe
 
 section {
     padding: 100px 5%;
-    overflow: hidden;
+    overflow: hidden; /* Memastikan tidak ada konten section yang 'bocor' */
     position: relative;
     z-index: 2;
 }
@@ -50,7 +54,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 6s ease, visibility 6s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .preloader-logo {
     width: 150px;
@@ -345,6 +349,44 @@ section {
     margin-bottom: 10px;
 }
 
+/* ================================= */
+/* ===== CHART SECTION STYLING ===== */
+/* ================================= */
+
+.chart-section {
+    text-align: center;
+    background-color: var(--dark-color);
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.chart-section h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: var(--light-color);
+}
+
+#dexscreener-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 55%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #131722;
+    border-radius: 20px;
+    border: 1px solid #444;
+    overflow: hidden;
+}
+
+#dexscreener-embed iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
 /* COMMUNITY SECTION */
 .community-section {
     background-color: var(--primary-color);
@@ -417,7 +459,7 @@ section {
 
 /* HAMBURGER & MOBILE NAV STYLING */
 .hamburger-button {
-    display: none; /* Sembunyikan di desktop secara default */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -435,9 +477,9 @@ section {
 .mobile-nav {
     position: fixed;
     top: 0;
-    left: 100%; /* Sembunyikan di luar layar secara default */
+    left: 100%;
     width: 100%;
-    height: 100vh; /* ✨ PERBAIKAN: Gunakan vh untuk tinggi viewport penuh */
+    height: 100vh;
     background-color: var(--dark-color);
     z-index: 1000;
     display: flex;
@@ -474,7 +516,6 @@ body.mobile-nav-active .hamburger-line:nth-child(3) {
 
 /* RESPONSIVE DESIGN (MOBILE) */
 @media (max-width: 768px) {
-    /* Tampilkan Hamburger & Sembunyikan Nav Desktop */
     .hamburger-button {
         display: block;
     }
@@ -482,12 +523,10 @@ body.mobile-nav-active .hamburger-line:nth-child(3) {
         display: none;
     }
 
-    /* Kurangi padding di semua section agar tidak sesak */
     section {
         padding: 60px 5%;
     }
     
-    /* === Hero Section === */
     .hero-section {
         flex-direction: column;
         text-align: center;
@@ -520,7 +559,6 @@ body.mobile-nav-active .hamburger-line:nth-child(3) {
         text-align: center;
     }
 
-    /* === Marquee Section === */
     .marquee-content span {
         font-size: 1rem;
     }
@@ -528,10 +566,10 @@ body.mobile-nav-active .hamburger-line:nth-child(3) {
         height: 24px;
     }
     
-    /* === About & Tokenomics Section === */
     .about-section h2,
     .tokenomics-section h2,
-    .community-section h2 {
+    .community-section h2,
+    .chart-section h2 {
         font-size: 2.2rem;
     }
     .tokenomics-container {
@@ -544,59 +582,11 @@ body.mobile-nav-active .hamburger-line:nth-child(3) {
         word-break: break-all;
     }
 
-    /* === Community Section === */
+    #dexscreener-embed {
+        padding-bottom: 125%; 
+    }
+
     .social-icon img {
         height: 40px;
-    }
-}
-/* ================================= */
-/* ===== CHART SECTION STYLING ===== */
-/* ================================= */
-
-.chart-section {
-    text-align: center;
-    background-color: var(--dark-color); /* Atau warna background lain yang sesuai */
-    padding-top: 60px; /* Mengurangi padding atas agar tidak terlalu jauh dari tokenomics */
-    padding-bottom: 100px;
-}
-
-.chart-section h2 {
-    font-size: 3rem;
-    margin-bottom: 50px;
-    color: var(--light-color);
-}
-
-#dexscreener-embed {
-    position: relative;
-    width: 100%;
-    /* Mengatur rasio aspek untuk desktop */
-    padding-bottom: 55%; 
-    max-width: 1200px; /* Menyamakan dengan container lain */
-    margin: 0 auto;
-    background-color: #131722; /* Warna background dari chart dexscreener */
-    border-radius: 20px;
-    border: 1px solid #444;
-    overflow: hidden; /* Memastikan iframe tidak keluar dari border-radius */
-}
-
-#dexscreener-embed iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border: 0;
-}
-
-
-/* Penyesuaian untuk Mobile */
-@media (max-width: 768px) {
-    .chart-section h2 {
-        font-size: 2.2rem;
-    }
-
-    #dexscreener-embed {
-        /* Mengatur rasio aspek untuk mobile agar lebih tinggi */
-        padding-bottom: 125%; 
     }
 }
